@@ -89,6 +89,7 @@ export default function App() {
             <img src={heroBanner} alt="Areca Leaf Products" className="w-full max-w-4xl mx-auto rounded-lg shadow-lg mb-6" />
           </div>
           <p className="text-green-700 mb-4 tracking-wide">ECO-FRIENDLY ARECA LEAF PRODUCTS</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-stone-900 mb-6">Areca Leaf Plates Manufacturer in Brahmavara, Udupi</h1>
           <p className="text-stone-600 max-w-2xl mx-auto mb-12">
             Manufacturing premium quality, 100% natural and biodegradable areca leaf products for a sustainable future
           </p>
@@ -113,7 +114,7 @@ export default function App() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-center mb-4 text-green-800">About Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">Eco-Friendly Areca Leaf Products</h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-12"></div>
           <div className="space-y-6 text-stone-700">
             <p>
@@ -138,7 +139,7 @@ export default function App() {
       {/* Products Section */}
       <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-stone-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center mb-4 text-green-800">Our Products</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">Areca Leaf Plates Supplier in Udupi</h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-4"></div>
           <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">
             Discover our range of premium areca leaf products designed for modern, eco-conscious living
@@ -154,7 +155,7 @@ export default function App() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="mb-2 text-stone-800">{product.name}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-stone-800">{product.name}</h3>
                   <p className="text-stone-600">{product.description}</p>
                 </div>
               </div>
@@ -166,7 +167,7 @@ export default function App() {
       {/* Why Choose Us Section */}
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center mb-4 text-green-800">Why Choose Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">Why Choose Siri Enterprises</h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-16"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {features.map((feature, index) => {
@@ -176,7 +177,7 @@ export default function App() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-6">
                     <Icon className="w-8 h-8 text-green-700" />
                   </div>
-                  <h3 className="mb-3 text-stone-800">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-stone-800">{feature.title}</h3>
                   <p className="text-stone-600">{feature.description}</p>
                 </div>
               );
@@ -188,7 +189,7 @@ export default function App() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-amber-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-center mb-4 text-green-800">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">Contact Us</h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-4"></div>
           <p className="text-center text-stone-600 mb-12">
             Get in touch with us for orders, inquiries, or partnerships
@@ -202,9 +203,9 @@ export default function App() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-stone-800">Phone</h3>
-                  <p className="text-stone-600">+91 98765 43210</p>
-                  <p className="text-stone-600">+91 98765 43211</p>
+                  <h3 className="text-lg font-semibold mb-2 text-stone-800">Phone</h3>
+                  <p className="text-stone-600">+91 8088467281</p>
+                  {/* <p className="text-stone-600">+91 98765 43211</p> */}
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -214,9 +215,9 @@ export default function App() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-stone-800">Email</h3>
-                  <p className="text-stone-600">info@sirienterprises.in</p>
-                  <p className="text-stone-600">sales@sirienterprises.in</p>
+                  <h3 className="text-lg font-semibold mb-2 text-stone-800">Email</h3>
+                  <p className="text-stone-600">sirienterprises.business@gmail.com</p>
+                  {/* <p className="text-stone-600">sales@sirienterprises.in</p> */}
                 </div>
               </div>
               <div className="flex items-start gap-4 md:col-span-2">
@@ -226,10 +227,12 @@ export default function App() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-stone-800">Location</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-stone-800">Location</h3>
                   <p className="text-stone-600">
                     Siri Enterprises<br />
-                    Karnataka, India
+                    Brahmavar, Udupi<br />
+                    Karnataka <br />
+                    India
                   </p>
                 </div>
               </div>
@@ -246,7 +249,7 @@ export default function App() {
               <img src={logo} alt="Siri Enterprises" className="h-12 w-auto brightness-0 invert" />
             </div>
             <div className="text-center md:text-right">
-              <p className="text-green-100">© 2024 Siri Enterprises. All rights reserved.</p>
+              <p className="text-green-100">© 2026 Siri Enterprises. All rights reserved.</p>
               <p className="text-green-200 mt-2">Committed to a sustainable future</p>
             </div>
           </div>
