@@ -321,12 +321,12 @@ export default function App() {
               { image: plate1,  name: '12 Inch – 4 Partition Plate', label: 'Partition', imgScale: 'scale-145' },
               { image: plate10, name: '10 Inch – 3 Partition Plate', label: 'Partition' ,imgScale: 'scale-100' },
               { image: plate8,  name: '10 × 10 Inch Square Plate',   label: 'Square'  ,imgScale: 'scale-100'   },
-              { image: plate5,  name: '4 Inch Square Bowl',           label: 'Bowl' ,imgScale: 'scale-150'},
-              { image: plate3,  name: '10 Inch Shallow Round Plate',  label: 'Round' ,imgScale: 'scale-150'},
-              { image: plate4,  name: '5.5 Inch Round Bowl',          label: 'Bowl' ,imgScale: 'scale-150'},
-              { image: plate2,  name: '8 Inch Round Plate',           label: 'Round' ,imgScale: 'scale-150'},
-              { image: plate6,  name: '10 Inch Round Plate',          label: 'Round'  ,imgScale: 'scale-115'   },
-              { image: plate9,  name: '11 Inch Round Plate',          label: 'Round' ,imgScale: 'scale-115'},
+              { image: plate5,  name: '4 Inch Square Bowl',           label: 'Bowl' ,imgScale: 'scale-130'},
+              { image: plate3,  name: '10 Inch Shallow Round Plate',  label: 'Round' ,imgScale: 'scale-120'},
+              { image: plate4,  name: '5.5 Inch Round Bowl',          label: 'Bowl' ,imgScale: 'scale-120'},
+              { image: plate2,  name: '8 Inch Round Plate',           label: 'Round' ,imgScale: 'scale-120'},
+              { image: plate6,  name: '10 Inch Round Plate',          label: 'Round'  ,imgScale: 'scale-100'   },
+              { image: plate9,  name: '11 Inch Round Plate',          label: 'Round' ,imgScale: 'scale-110'},
               { image: plate7,  name: '12 Inch Round Plate',          label: 'Round' ,imgScale: 'scale-115'},
             ].map((item, index) => (
               <div
