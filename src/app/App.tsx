@@ -318,16 +318,16 @@ export default function App() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { image: plate1,  name: '12 Inch – 4 Partition Plate', label: 'Partition' },
-              { image: plate10,  name: '10 Inch – 3 Partition Plate', label: 'Partition' },
-              { image: plate8,  name: '10 × 10 Inch Square Plate',   label: 'Square'    },
-              { image: plate5,  name: '4 Inch Square Bowl',           label: 'Bowl'      },
-              { image: plate3,  name: '10 Inch Shallow Round Plate',  label: 'Round'     },
-              { image: plate4,  name: '5.5 Inch Round Bowl',          label: 'Bowl'      },
-              { image: plate2,  name: '8 Inch Round Plate',           label: 'Round'     },
-              { image: plate6,  name: '10 Inch Round Plate',          label: 'Round'     },
-              { image: plate9,  name: '11 Inch Round Plate',          label: 'Round'     },
-              { image: plate7, name: '12 Inch Round Plate',          label: 'Round'     },
+              { image: plate1,  name: '12 Inch – 4 Partition Plate', label: 'Partition', imgScale: 'scale-145' },
+              { image: plate10, name: '10 Inch – 3 Partition Plate', label: 'Partition' ,imgScale: 'scale-100' },
+              { image: plate8,  name: '10 × 10 Inch Square Plate',   label: 'Square'  ,imgScale: 'scale-100'   },
+              { image: plate5,  name: '4 Inch Square Bowl',           label: 'Bowl' ,imgScale: 'scale-150'},
+              { image: plate3,  name: '10 Inch Shallow Round Plate',  label: 'Round' ,imgScale: 'scale-150'},
+              { image: plate4,  name: '5.5 Inch Round Bowl',          label: 'Bowl' ,imgScale: 'scale-150'},
+              { image: plate2,  name: '8 Inch Round Plate',           label: 'Round' ,imgScale: 'scale-150'},
+              { image: plate6,  name: '10 Inch Round Plate',          label: 'Round'  ,imgScale: 'scale-115'   },
+              { image: plate9,  name: '11 Inch Round Plate',          label: 'Round' ,imgScale: 'scale-115'},
+              { image: plate7,  name: '12 Inch Round Plate',          label: 'Round' ,imgScale: 'scale-115'},
             ].map((item, index) => (
               <div
                 key={index}
@@ -337,7 +337,7 @@ export default function App() {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 ${item.imgScale ?? ''}`}
                   />
                 </div>
                 <div className="p-3 sm:p-4 flex flex-col gap-1.5">
