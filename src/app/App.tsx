@@ -3,13 +3,24 @@ import { Mail, Phone, MapPin, Leaf, Shield, Award, Droplet, Factory, CheckCircle
 import { Button } from './components/ui/button';
 import emailjs from '@emailjs/browser';
 import logo from '../assets/ea3ac245bc56f930353dc88f1742094b705a2c03.png';
-import heroBanner from '../assets/25f4320411a90283018883540937a0b9b5589b24.png';
+import heroBanner from '../assets/homepage1.jpeg';
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
 import image4 from '../assets/image4.png';
+import plate1 from '../assets/products/plate1.jpeg';
+import plate2 from '../assets/products/plate2.jpeg';
+import plate3 from '../assets/products/plate3.jpeg';
+import plate4 from '../assets/products/plate4.jpeg';
+import plate5 from '../assets/products/plate5.jpeg';
+import plate6 from '../assets/products/plate6.jpeg';
+import plate7 from '../assets/products/plate7.jpeg';
+import plate8 from '../assets/products/plate8.jpeg';
+import plate9 from '../assets/products/plate9.jpeg';
+import plate10 from '../assets/products/plate10.jpeg';
 
 export default function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -178,11 +189,12 @@ export default function App() {
             <div className="flex items-center gap-3">
               <img src={logo} alt="Siri Enterprises Logo" className="h-12 w-auto" />
             </div>
+            {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
               <button onClick={() => scrollToSection('about')} className="text-stone-700 hover:text-green-700 transition-colors">
                 About
               </button>
-              <button onClick={() => scrollToSection('products')} className="text-stone-700 hover:text-green-700 transition-colors">
+              <button onClick={() => scrollToSection('product-catalog')} className="text-stone-700 hover:text-green-700 transition-colors">
                 Products
               </button>
               <button onClick={() => scrollToSection('manufacturing')} className="text-stone-700 hover:text-green-700 transition-colors">
@@ -198,8 +210,45 @@ export default function App() {
                 Contact
               </button>
             </div>
+            {/* Mobile Hamburger */}
+            <button
+              className="md:hidden p-2 rounded-md text-stone-700 hover:text-green-700 hover:bg-green-50 transition-colors"
+              onClick={() => setMobileMenuOpen(prev => !prev)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
+        {/* Mobile Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-stone-200 px-4 py-4 flex flex-col gap-4">
+            {[
+              { label: 'About',          id: 'about'          },
+              { label: 'Products',       id: 'product-catalog'},
+              { label: 'Manufacturing',  id: 'manufacturing'  },
+              { label: 'Why Choose Us',  id: 'features'       },
+              { label: 'Bulk Enquiry',   id: 'enquiry'        },
+              { label: 'Contact',        id: 'contact'        },
+            ].map(({ label, id }) => (
+              <button
+                key={id}
+                onClick={() => { scrollToSection(id); setMobileMenuOpen(false); }}
+                className="text-left text-stone-700 hover:text-green-700 font-medium py-1 border-b border-stone-100 last:border-0 transition-colors"
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -225,7 +274,7 @@ export default function App() {
               Request Bulk Quote
             </Button>
             <Button 
-              onClick={() => scrollToSection('products')}
+              onClick={() => scrollToSection('product-catalog')}
               variant="outline"
               className="border-green-700 text-green-700 hover:bg-green-50 px-8 py-6 text-lg"
             >
@@ -238,7 +287,7 @@ export default function App() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">About Siri Enterprises</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">About Siri</h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-12"></div>
           <div className="space-y-6 text-stone-700 text-lg leading-relaxed">
             <p>
@@ -257,10 +306,56 @@ export default function App() {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-stone-50">
+    
+
+      {/* Product Sizes & Catalog Section */}
+      <section id="product-catalog" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">Our Products</h2>
+          <div className="w-20 h-1 bg-green-700 mx-auto mb-4"></div>
+          <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto text-lg">
+            Explore our range of biodegradable areca leaf plates and bowls available in multiple sizes, shapes, and compartment options for retail, bulk, and export supply.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              { image: plate1,  name: '12 Inch – 4 Partition Plate', label: 'Partition' },
+              { image: plate10,  name: '10 Inch – 3 Partition Plate', label: 'Partition' },
+              { image: plate8,  name: '10 × 10 Inch Square Plate',   label: 'Square'    },
+              { image: plate5,  name: '4 Inch Square Bowl',           label: 'Bowl'      },
+              { image: plate3,  name: '10 Inch Shallow Round Plate',  label: 'Round'     },
+              { image: plate4,  name: '5.5 Inch Round Bowl',          label: 'Bowl'      },
+              { image: plate2,  name: '8 Inch Round Plate',           label: 'Round'     },
+              { image: plate6,  name: '10 Inch Round Plate',          label: 'Round'     },
+              { image: plate9,  name: '11 Inch Round Plate',          label: 'Round'     },
+              { image: plate7, name: '12 Inch Round Plate',          label: 'Round'     },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="group bg-white rounded-xl border border-stone-200 shadow-sm hover:shadow-md hover:border-green-300 transition-all duration-300 overflow-hidden flex flex-col"
+              >
+                <div className="bg-white p-4 sm:p-6 flex items-center justify-center aspect-square overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-3 sm:p-4 flex flex-col gap-1.5">
+                  <span className="inline-block self-start text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-100 text-green-700">
+                    {item.label}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-bold text-stone-800 leading-snug">{item.name}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+        {/* Products Section */}
+      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-stone-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-green-800">Our Offerings</h2>
           <div className="w-20 h-1 bg-green-700 mx-auto mb-4"></div>
           <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto text-lg">
             Premium areca leaf tableware designed for modern, eco-conscious businesses
@@ -629,7 +724,7 @@ export default function App() {
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('products')} className="text-green-100 hover:text-white transition-colors">
+                  <button onClick={() => scrollToSection('product-catalog')} className="text-green-100 hover:text-white transition-colors">
                     Our Products
                   </button>
                 </li>
