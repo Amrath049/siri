@@ -32,12 +32,12 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'areca' | 'cashew'>('areca');
   const [formData, setFormData] = useState({
     name: '',
-    company: '',
+    // company: '',
     email: '',
     phone: '',
-    productType: '',
-    sizeOrGrade: '',
-    quantity: '',
+    // productType: '',
+    // sizeOrGrade: '',
+    // quantity: '',
     location: '',
     message: ''
   });
@@ -60,21 +60,21 @@ export default function App() {
     setSubmitStatus('idle');
 
     try {
-      const serviceId = 'service_ur83an7';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'd7khWSD6Ror53k6XT';
+      const serviceId = 'service_h75u27r';
+      const templateId = 'template_1w6awv6';
+      const publicKey = 'l9MG9MHSfN97TezpC';
 
       await emailjs.send(
         serviceId,
         templateId,
         {
           from_name: formData.name,
-          from_company: formData.company,
+          // from_company: formData.company,
           from_email: formData.email,
           from_phone: formData.phone,
-          product_type: formData.productType,
-          size_or_grade: formData.sizeOrGrade,
-          quantity: formData.quantity,
+          // product_type: formData.productType,
+          // size_or_grade: formData.sizeOrGrade,
+          // quantity: formData.quantity,
           location: formData.location,
           message: formData.message,
           to_email: 'sirienterprises.business@gmail.com'
@@ -85,12 +85,12 @@ export default function App() {
       setSubmitStatus('success');
       setFormData({
         name: '',
-        company: '',
+        // company: '',
         email: '',
         phone: '',
-        productType: '',
-        sizeOrGrade: '',
-        quantity: '',
+        // productType: '',
+        // sizeOrGrade: '',
+        // quantity: '',
         location: '',
         message: ''
       });
@@ -102,8 +102,8 @@ export default function App() {
     }
   };
 
-  const isCashewSelected = formData.productType.toLowerCase().includes('cashew') ||
-    ['W180', 'W240', 'W320', 'K - Butts', 'SP', 'SSP', 'SWP', 'BB', 'Cashew Mixed'].some(g => formData.productType.includes(g));
+  // const isCashewSelected = formData.productType.toLowerCase().includes('cashew') ||
+  //   ['W180', 'W240', 'W320', 'K - Butts', 'SP', 'SSP', 'SWP', 'BB', 'Cashew Mixed'].some(g => formData.productType.includes(g));
 
   const products = [
     {
@@ -874,7 +874,7 @@ export default function App() {
                   <div>
                     <h4 className="text-lg font-semibold mb-2 text-stone-800">Phone / WhatsApp</h4>
                     <p className="text-stone-600">+91 8088467281</p>
-                    <p className="text-stone-600">+91 9187567281</p>
+                    {/* <p className="text-stone-600">+91 9187567281</p> */}
                   </div>
                 </div>
 
