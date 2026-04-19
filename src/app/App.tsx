@@ -4,10 +4,10 @@ import { Button } from './components/ui/button';
 import emailjs from '@emailjs/browser';
 import logo from '../assets/ea3ac245bc56f930353dc88f1742094b705a2c03.png';
 import heroDual from '../assets/hero_dual.png';
-import image1 from '../assets/image1.png';
-import image2 from '../assets/image2.png';
-import image3 from '../assets/image3.png';
-import image4 from '../assets/image4.png';
+import offer1 from '../assets/offer1.png';
+import offer2 from '../assets/offer2.png';
+import offer3 from '../assets/offer3.png';
+import offer4 from '../assets/offer4.png';
 import plate1 from '../assets/products/plate1.jpeg';
 import plate2 from '../assets/products/plate2.jpeg';
 import plate3 from '../assets/products/plate3.jpeg';
@@ -109,22 +109,22 @@ export default function App() {
     {
       name: "Premium Areca Leaf Plates",
       description: "Durable, biodegradable plates made from naturally fallen areca palm leaves. Suitable for hot, cold, and oily foods.",
-      image: image1
+      image: offer1
     },
     {
       name: "Multiple Sizes & Shapes",
       description: "Available in round, square, and customized dimensions for various serving requirements.",
-      image: image2
+      image: offer2
     },
     {
       name: "Bulk & Export Supply",
       description: "Large-scale production capacity with consistent quality control for distributors, wholesalers, and export buyers.",
-      image: image3
+      image: offer3
     },
     {
       name: "Catering & Event Solutions",
       description: "Sustainable tableware solutions for weddings, corporate events, food services, and eco-conscious gatherings.",
-      image: image4
+      image: offer4
     }
   ];
 
@@ -409,28 +409,28 @@ export default function App() {
 
         {/* Business summary strip */}
         <div className="bg-white border-b border-stone-200">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2">
-            <div className="flex items-center gap-4 px-8 py-5 border-b md:border-b-0 md:border-r border-stone-200">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-green-700" />
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2">
+            <div className="flex items-center gap-5 px-8 md:px-12 py-6 md:py-8 border-b md:border-b-0 md:border-r border-stone-200">
+              <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-100 flex items-center justify-center">
+                <Leaf className="w-6 h-6 md:w-8 md:h-8 text-green-700" />
               </div>
               <div>
-                <h2 className="font-bold text-stone-900 text-base">Areca Leaf Plates</h2>
-                <p className="text-stone-500 text-xs">100% Natural · Chemical-Free · Bulk &amp; Export Supply</p>
+                <h2 className="font-bold text-stone-900 text-base md:text-lg">Areca Leaf Plates</h2>
+                <p className="text-stone-500 text-xs md:text-sm mt-0.5">100% Natural · Chemical-Free · Bulk &amp; Export Supply</p>
               </div>
-              <Button onClick={() => scrollToSection('product-catalog')} className="ml-auto bg-green-700 hover:bg-green-800 text-white text-xs px-4 py-2 h-auto">
+              <Button onClick={() => scrollToSection('product-catalog')} className="ml-auto bg-green-700 hover:bg-green-800 text-white text-xs md:text-sm px-4 md:px-6 py-2 md:py-2.5 h-auto">
                 View
               </Button>
             </div>
-            <div className="flex items-center gap-4 px-8 py-5">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
-                <Nut className="w-5 h-5 text-amber-700" />
+            <div className="flex items-center gap-5 px-8 md:px-12 py-6 md:py-8">
+              <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-amber-100 flex items-center justify-center">
+                <Nut className="w-6 h-6 md:w-8 md:h-8 text-amber-700" />
               </div>
               <div>
-                <h2 className="font-bold text-stone-900 text-base">Premium Cashew Nuts</h2>
-                <p className="text-stone-500 text-xs">CEPCI-Graded · W180 to BB · Wholesale &amp; Export</p>
+                <h2 className="font-bold text-stone-900 text-base md:text-lg">Premium Cashew Nuts</h2>
+                <p className="text-stone-500 text-xs md:text-sm mt-0.5">CEPCI-Graded · W180 to BB · Wholesale &amp; Export</p>
               </div>
-              <Button onClick={() => scrollToSection('cashew')} className="ml-auto bg-amber-600 hover:bg-amber-700 text-white text-xs px-4 py-2 h-auto">
+              <Button onClick={() => scrollToSection('cashew')} className="ml-auto bg-amber-600 hover:bg-amber-700 text-white text-xs md:text-sm px-4 md:px-6 py-2 md:py-2.5 h-auto">
                 View
               </Button>
             </div>
@@ -707,25 +707,26 @@ export default function App() {
                     className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
-                <div>
+                {/* <div>
                   <label htmlFor="company" className="block text-sm font-semibold text-stone-700 mb-2">Company Name *</label>
                   <input
                     type="text" id="company" name="company" required
                     value={formData.company} onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-stone-700 mb-2">Email *</label>
+                </div> */}
+                  <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-stone-700 mb-2">Email </label>
                   <input
                     type="email" id="email" name="email" required
                     value={formData.email} onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold text-stone-700 mb-2">Phone / WhatsApp *</label>
                   <input
@@ -734,10 +735,20 @@ export default function App() {
                     className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
+
+                        <div>
+                  <label htmlFor="location" className="block text-sm font-semibold text-stone-700 mb-2">Country / Location *</label>
+                  <input
+                    type="text" id="location" name="location" required
+                    placeholder="e.g., India, UAE, USA"
+                    value={formData.location} onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  />
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
+                {/* <div>
                   <label htmlFor="productType" className="block text-sm font-semibold text-stone-700 mb-2">
                     Product Category *
                   </label>
@@ -767,9 +778,9 @@ export default function App() {
                       <option value="Cashew – Mixed Grades">Mixed / Multiple Grades</option>
                     </optgroup>
                   </select>
-                </div>
+                </div> */}
 
-                <div>
+                {/* <div>
                   <label htmlFor="sizeOrGrade" className="block text-sm font-semibold text-stone-700 mb-2">
                     {isCashewSelected ? 'Additional Grade / Packing Preference' : 'Plate Size / Specification'}
                   </label>
@@ -779,11 +790,11 @@ export default function App() {
                     value={formData.sizeOrGrade} onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+                {/* <div>
                   <label htmlFor="quantity" className="block text-sm font-semibold text-stone-700 mb-2">Quantity Required *</label>
                   <input
                     type="text" id="quantity" name="quantity" required
@@ -791,16 +802,8 @@ export default function App() {
                     value={formData.quantity} onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label htmlFor="location" className="block text-sm font-semibold text-stone-700 mb-2">Country / Location *</label>
-                  <input
-                    type="text" id="location" name="location" required
-                    placeholder="e.g., India, UAE, USA"
-                    value={formData.location} onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                  />
-                </div>
+                </div> */}
+        
               </div>
 
               <div>
